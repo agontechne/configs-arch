@@ -1,0 +1,79 @@
+! Xresouces
+! To reread the resouces file type:
+!   xrdb ~/.Xresources
+! For xinitrc:
+!  [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
+! Xft settings ---------------------------------------------------------------
+!
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+! urxvt ----------------------------------------------------------------------
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
+URxvt.font:                 xft:Inconsolata:style=Regular:size=11                
+URxvt.url-select.launcher:  firefox
+URxvt.url-select.underline: true
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+URxvt.scrollBar:            false
+URxvt.url-launcher:         /usr/bin/xdg-open
+URxvt.matcher.button:       1
+URxvt.keysym.C-Delete:      perl:matcher:last
+URxvt.keysym.M-Delete:      perl:matcher:list
+URxvt.letterSpace:          -1
+URxvt.underlineColor:       yellow
+
+! rxvt-colors
+!URxvt.cursorColor:  #dc74d1
+URxvt.pointerColor: #dc74d1
+!URxvt.background:   #0e0e0e
+!URxvt.foreground:   #4ad5e1
+URxvt.color0:       #000000
+URxvt.color8:       #8b8f93
+URxvt.color1:       #dc74d1
+URxvt.color9:       #dc74d1
+URxvt.color2:       #0eb8c7
+URxvt.color10:      #0eb8c7
+URxvt.color3:       #dfe37e
+URxvt.color11:      #dfe37e
+URxvt.color5:       #9e88f0
+URxvt.color13:      #9e88f0
+URxvt.color6:       #73f7ff
+URxvt.color14:      #73f7ff
+!URxvt.color7:       #e1dddd
+URxvt.color15:      #e1dddd
+
+! Testing these settings - some overrides here
+URxvt.background:       #000000
+URxvt.foreground:       gray90
+URxvt.color7:           gray90
+URxvt.colorBD:          #ffffff
+URxvt.cursorColor:      #e0e080
+URxvt.throughColor:     #8080f0
+URxvt.highlightColor:   #f0f0f0
+
+! Various settings
+URxvt.saveLines:        8192
+URxvt.mapAlert:         true
+URxvt.insecure:         true
+URxvt.visualBell:       true
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! Copyright: 2017 leofa
+! ------------------------------------------------------------------------------
+! "Color scheme for normal row" Set from: File
+rofi.color-normal:                   argb:31d1f21, #c4cbd4, argb:96404552, #4084d6, #f9f9f9
+! "Color scheme for urgent row" Set from: File
+rofi.color-urgent:                   argb:2c1d1f21, #cc6666, argb:e54b5160, #a54242, #f9f9f9
+! "Color scheme for active row" Set from: File
+rofi.color-active:                   argb:2c1d1f21, #65acff, argb:e44b5160, #4491ed, #f9f9f9
+! "Color scheme window" Set from: File
+rofi.color-window:                   argb:f22d303b, #7c8389, #1d1f21
+! "Separator style (none, dash, solid)" Set from: XResources
+rofi.separator-style:                solid
